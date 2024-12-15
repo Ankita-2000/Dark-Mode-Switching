@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode/Light Mode</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+
+      .light-mode {
+        background-color: white;
+        color: black;
+      }
+    </style>
+
+    <script defer>
+      function darkMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerHTML = "Dark Mode is ON";
+      }
+
+      function lightMode() {
+        let element = document.body;
+        let content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerHTML = "Dark Mode is OFF";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>DARK MODE -> LIGHT MODE</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, eligendi
+      aperiam sequi harum quo illum facilis, voluptatem facere consequatur
+      obcaecati corporis porro quisquam iusto sed laborum mollitia soluta nemo
+      quidem!
+    </p>
+
+    <img
+      src="https://media.geeksforgeeks.org/wp-content/uploads/20200122115631/GeeksforGeeks210.png"
+    />
+
+    <h3 id="DarkModetext">Dark Mode is OFF</h3>
+    <button onclick="darkMode()">Darkmode</button>
+    <button onclick="lightMode()">LightMode</button>
+  </body>
+</html>
